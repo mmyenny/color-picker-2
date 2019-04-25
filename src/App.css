@@ -20,7 +20,8 @@ div.container {
 }
 
 div.box {
-  border: 2px solid black;
+  border: 2px solid white;
+  box-shadow: 0 0 5px white;
   border-radius: 5px;
   height: 100px;
   width: 100px;
@@ -39,6 +40,30 @@ li {
   color: white;
 }
 
+label {
+  padding-left: 10px;
+}
+
 p {
   color: white;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 75px;
+    margin: 20px;
+  }
+
+  div.box {
+    height: 135px;
+    width: 135px;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }

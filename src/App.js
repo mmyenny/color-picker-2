@@ -36,7 +36,15 @@ class App extends Component {
     }%)`
     return (
       <div className="App">
-        <h1>Color Picker</h1>
+        <h1
+          style={{
+            textShadow: `0px 3px 0.5px hsl(${this.state.hue},${
+              this.state.saturation
+            }%,${this.state.lightness}%)`
+          }}
+        >
+          Color Picker
+        </h1>
         <div className="container">
           <div className="box" style={{ backgroundColor: color }} />
           <div className="sliders">
