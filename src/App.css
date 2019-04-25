@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
 .App {
   text-align: center;
+}
+
+h1 {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 div.container {
@@ -9,6 +15,7 @@ div.container {
 
 div.box {
   border: 2px solid black;
+  border-radius: 5px;
   height: 100px;
   width: 100px;
   margin: 10px;
