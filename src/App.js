@@ -12,22 +12,50 @@ class App extends Component {
     }
   }
 
+  updateHue = event => {
+    this.setState({
+      hue: event.target.value
+    })
+  }
+
+  updateSaturation = event => {
+    this.setState({
+      saturation: event.target.value
+    })
+  }
+
+  updateLightness = event => {
+    this.setState({
+      lightness: event.target.value
+    })
+  }
+
   render() {
+    let color = `hsl(${this.state.hue},${this.state.saturation}%,${
+      this.state.lightness
+    }%)`
     return (
       <div className="App">
         <h1>Color Picker</h1>
         <div className="container">
-          <div className="box" />
+          <div className="box" style={{ backgroundColor: color }} />
           <div className="sliders">
             <ul>
               <li>
-                <input type="range" value={this.state.hue} min="0" max="360" />
+                <input
+                  type="range"
+                  value={this.state.hue}
+                  onChange={this.updateHue}
+                  min="0"
+                  max="360"
+                />
                 <label>Hue</label>
               </li>
               <li>
                 <input
                   type="range"
                   value={this.state.saturation}
+                  onChange={this.updateSaturation}
                   min="0"
                   max="100"
                 />
@@ -37,6 +65,7 @@ class App extends Component {
                 <input
                   type="range"
                   value={this.state.lightness}
+                  onChange={this.updateLightness}
                   min="0"
                   max="100"
                 />
@@ -45,6 +74,7 @@ class App extends Component {
             </ul>
           </div>
         </div>
+        <p>{color}</p>
       </div>
     )
   }

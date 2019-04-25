@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
+html {
+  background-color: rgb(42, 42, 42);
+}
+
 .App {
   text-align: center;
 }
 
 h1 {
   font-family: 'Noto Sans', sans-serif;
+  font-size: 50px;
+  color: white;
 }
 
 div.container {
@@ -30,4 +36,9 @@ li {
   display: flex;
   list-style: none;
   margin: 10px;
+  color: white;
+}
+
+p {
+  color: white;
 }
