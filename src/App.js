@@ -9,7 +9,7 @@ class App extends Component {
       hue: 0,
       saturation: 0,
       lightness: 0,
-      alpha: 0
+      alpha: 1
     }
   }
 
@@ -31,23 +31,31 @@ class App extends Component {
     })
   }
 
+  updateAlpha = event => {
+    this.setState({
+      alpha: event.target.value
+    })
+  }
+
   render() {
     let color = `hsl(${this.state.hue},${this.state.saturation}%,${
       this.state.lightness
-    }%)`
+    }%,${this.state.alpha})`
     return (
       <div className="App">
         <h1
           style={{
             textShadow: `0px 3px 0.5px hsl(${this.state.hue},${
               this.state.saturation
-            }%,${this.state.lightness}%)`
+            }%,${this.state.lightness}%,${this.state.alpha})`
           }}
         >
           Color Picker
         </h1>
         <div className="container">
-          <div className="box" style={{ backgroundColor: color }} />
+          <div className="backgroundBox">
+            <div className="box" style={{ backgroundColor: color }} />
+          </div>
           <div className="sliders">
             <ul>
               <li>
@@ -86,7 +94,8 @@ class App extends Component {
                   value={this.state.alpha}
                   onChange={this.updateAlpha}
                   min="0"
-                  max="100"
+                  max="1"
+                  step=".01"
                 />
                 <label>A</label>
               </li>

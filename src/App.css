@@ -21,6 +21,13 @@ div.container {
   align-items: center;
 }
 
+div.backgroundBox {
+  background-image: url(./assets/palette.png);
+  background-size: 15vw;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 div.box {
   border: 2px solid white;
   box-shadow: 0 0 5px white;
