@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       hue: 0,
       saturation: 0,
-      lightness: 0
+      lightness: 0,
+      alpha: 0
     }
   }
 
@@ -57,7 +58,7 @@ class App extends Component {
                   min="0"
                   max="360"
                 />
-                <label>Hue</label>
+                <label>H</label>
               </li>
               <li>
                 <input
@@ -67,7 +68,7 @@ class App extends Component {
                   min="0"
                   max="100"
                 />
-                <label>Saturation</label>
+                <label>S</label>
               </li>
               <li>
                 <input
@@ -77,7 +78,17 @@ class App extends Component {
                   min="0"
                   max="100"
                 />
-                <label>Lightness</label>
+                <label>L</label>
+              </li>
+              <li>
+                <input
+                  type="range"
+                  value={this.state.alpha}
+                  onChange={this.updateAlpha}
+                  min="0"
+                  max="100"
+                />
+                <label>A</label>
               </li>
             </ul>
           </div>
