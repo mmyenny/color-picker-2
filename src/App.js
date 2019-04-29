@@ -6,9 +6,9 @@ class App extends Component {
     super(props)
 
     this.state = {
-      hue: 0,
-      saturation: 0,
-      lightness: 0,
+      hue: Math.ceil(Math.random() * 360),
+      saturation: Math.ceil(Math.random() * 100),
+      lightness: Math.ceil(Math.random() * 100),
       alpha: 1
     }
   }
