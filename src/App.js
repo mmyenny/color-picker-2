@@ -37,6 +37,15 @@ class App extends Component {
     })
   }
 
+  pickRandomColor = event => {
+    this.setState({
+      hue: Math.ceil(Math.random() * 360),
+      saturation: Math.ceil(Math.random() * 100),
+      lightness: Math.ceil(Math.random() * 100),
+      alpha: 1
+    })
+  }
+
   render() {
     let color = `hsl(${this.state.hue},${this.state.saturation}%,${
       this.state.lightness
@@ -103,6 +112,7 @@ class App extends Component {
           </div>
         </div>
         <p>{color}</p>
+        <button onClick={this.pickRandomColor}>Random Color!</button>
       </div>
     )
   }
