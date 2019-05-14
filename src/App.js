@@ -37,8 +37,8 @@ class App extends Component {
     })
   }
 
-  //for button to generate random color
   pickRandomColor = event => {
+    //set state to random generated values
     this.setState({
       hue: Math.ceil(Math.random() * 360),
       saturation: Math.ceil(Math.random() * 100),
@@ -48,6 +48,7 @@ class App extends Component {
   }
 
   render() {
+    //variable creates hsla values from state
     let color = `hsla(${this.state.hue},${this.state.saturation}%,${
       this.state.lightness
     }%,${this.state.alpha})`
